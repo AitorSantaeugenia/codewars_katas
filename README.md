@@ -1,2 +1,2 @@
 # CodeWars Katas
-Solutions to JavaScript CodeWars Katas
+Solutions to exercises
