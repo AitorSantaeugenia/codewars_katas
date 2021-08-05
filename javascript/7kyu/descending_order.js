@@ -10,13 +10,21 @@ Input: 145263 Output: 654321
 Input: 123456789 Output: 987654321
 */
 
-function descendingOrder(n) {
-	let strNumber = String(n).split('').sort((a, b) => a - b).reverse().join('');
-	let numbToInt = parseInt(strNumber);
-
-	return numbToInt;
+function highAndLow(numbers) {
+	let nums = numbers.split(' ');
+	return `${Math.max(...nums)} ${Math.min(...nums)}`;
 }
+console.log(highAndLow('1 2 3 4 5')); // return "5 1"
+console.log(highAndLow('1 2 -3 4 5')); // return "5 -3"
+console.log(highAndLow('1 9 3 4 -5')); // return "9 -5"
 
-console.log(descendingOrder(42145));
-console.log(descendingOrder(145263));
-console.log(descendingOrder(123456789));
+/*
+function highAndLow(numbers) {
+  numbers = numbers.split(' ').map(Number)
+  
+  var min = Math.min.apply(null, numbers)
+  var max = Math.max.apply(null, numbers)
+  
+  return max + ' ' + min
+}
+*/
